@@ -34,4 +34,9 @@ class User
   # field :failed_attempts, :type => Integer, :default => 0 # Only if lock strategy is :failed_attempts
   # field :unlock_token,    :type => String # Only if unlock strategy is :email or :both
   # field :locked_at,       :type => Time
+  
+  #name
+  index({ name: 1 }, { unique: true, background: true })
+  field :name, :type => String
+  validates :name, presence: true, length: 2..10, uniqueness: true
 end
