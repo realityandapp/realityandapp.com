@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Raa::Application.config.secret_key_base = '38baa99cb002afa742dfc0a23f8b8dbabfd699579eafc96fba1f9d72fc64cb8b8ddafb8fe1f90f0cac3838219870766f51316683e047fdc2c125ce012a5b9492'
+Raa::Application.config.secret_key_base = '11fb70690cb3e1f66bc530fd4782dc811f98a2c661fdd3db2519880bf087602b3ad7955df6c48b907b64caff3e3bf8362a70292c57107fe9251de00832b6bb9f'
