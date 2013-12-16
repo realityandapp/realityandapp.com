@@ -5,11 +5,11 @@
 img {
   @extend .img-responsive;
   margin: 0 auto;
-  }
+}
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
-  }
+}
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
@@ -17,29 +17,82 @@ img {
 .column {
   @extend .col-md-6;
   @extend .text-center;
-  }
+}
 .form {
   @extend .col-md-6;
-  }
+}
 .form-centered {
   @extend .col-md-6;
   @extend .text-center;
-  }
+}
 .submit {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-lg;
-  }
+}
 // apply styles to HTML elements
 // to make views framework-neutral
+body{
+  background-color: #eee;
+}
 main {
   @extend .container;
   background-color: #eee;
   padding-bottom: 80px;
+  /*margin-top: 51px; // accommodate the navbar*/
   width: 100%;
-  margin-top: 51px; // accommodate the navbar
-  }
+  height: 2000px;
+}
 section {
   @extend .row;
   margin-top: 20px;
+}
+
+footer{
+  width: 100%;
+  background-color: #333;
+  #links{
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    border-bottom: 1px solid #111;
+    padding: 20px 0 10px 0;
+    ul{padding: 0;}
+    .links{
+      @extend .col-md-2;
+      h4{
+        color: #ccc;
+        font-size: 16px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      a{
+        color:#666;
+        display: inline;
+      }
+      li{
+        margin: 0 0 10px 0;
+      }
+    }
   }
+  #copyright{
+    border-top: 1px solid #464646;
+    background: #28292a;
+    font-size: 12px;
+    color: #555;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    padding: 20px 0 20px 0;
+    a{
+      color: #555;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+    }
+    a:hover{
+      text-decoration: none;
+      color: #CCC;
+      text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+      background: 0;
+    }
+  }
+} 
+header{
+  background-color: #eee;
+  margin-top: 10px;
+}
