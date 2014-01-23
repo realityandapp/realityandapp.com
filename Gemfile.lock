@@ -1,21 +1,30 @@
 GIT
-  remote: git://github.com/evansagge/mongoid-rspec.git
-  revision: cd7fa1ff285f73d0948876fb1250842718716a2f
+  remote: git://github.com/gregbell/active_admin.git
+  revision: d0eb6d9a3e4f156a57a1a0d69b3c57199c0a8ddc
   specs:
-    mongoid-rspec (1.9.0)
-      mongoid (>= 3.0.1)
-      rake
-      rspec (>= 2.14)
+    activeadmin (1.0.0.pre)
+      arbre (~> 1.0)
+      bourbon
+      coffee-rails
+      devise (~> 3.2)
+      formtastic (~> 2.3.0.rc2)
+      inherited_resources (~> 1.3)
+      jquery-rails
+      jquery-ui-rails
+      kaminari (~> 0.15)
+      rails (>= 3.2, < 4.1)
+      ransack (~> 1.0)
+      sass-rails
 
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: f8b439dd9a59b769389aff81a42502cd857cf7fa
+  revision: c6b832990cb9a09141c3eb381355117e9f9e2c62
   specs:
-    mongoid (4.0.0.alpha1)
-      activemodel (~> 4.0.0)
-      moped (~> 2.0.beta4)
-      origin (~> 1.0)
-      tzinfo (~> 0.3.37)
+    mongoid (4.0.0.alpha2)
+      activemodel (>= 4.0.0)
+      moped (~> 2.0.beta5)
+      origin (~> 2.1)
+      tzinfo (>= 0.3.37)
 
 GEM
   remote: http://ruby.taobao.org/
@@ -45,20 +54,25 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
+    arbre (1.0.1)
+      activesupport (>= 3.0.0)
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    better_errors (1.0.1)
+    better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.0.3.0)
       sass (~> 3.2)
-    bson (2.0.0)
+    bourbon (3.1.8)
+      sass (>= 3.2.0)
+      thor
+    bson (2.1.2)
     builder (3.1.4)
     cancan (1.6.10)
-    capybara (2.2.0)
+    capybara (2.2.1)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
@@ -101,7 +115,9 @@ GEM
       bundler (~> 1.0)
       rails (>= 3, < 5)
     formatador (0.2.4)
-    guard (2.2.4)
+    formtastic (2.3.0.rc2)
+      actionpack (>= 3.0)
+    guard (2.3.0)
       formatador (>= 0.2.4)
       listen (~> 2.1)
       lumberjack (~> 1.0)
@@ -112,21 +128,32 @@ GEM
       guard (~> 2.2)
     guard-rails (0.4.7)
       guard (>= 0.2.2)
-    guard-rspec (4.2.0)
-      guard (>= 2.1.1)
+    guard-rspec (4.2.4)
+      guard (~> 2.1)
       rspec (>= 2.14, < 4.0)
+    has_scope (0.6.0.rc)
+      actionpack (>= 3.2, < 5)
+      activesupport (>= 3.2, < 5)
     hike (1.2.3)
     i18n (0.6.9)
+    inherited_resources (1.4.1)
+      has_scope (~> 0.6.0.rc)
+      responders (~> 1.0.0.rc)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-ui-rails (4.1.1)
+      railties (>= 3.1.0)
     json (1.8.1)
+    kaminari (0.15.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     launchy (2.4.2)
       addressable (~> 2.3)
-    listen (2.3.1)
+    listen (2.4.0)
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -138,16 +165,18 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
-    moped (2.0.0.beta4)
-      bson (~> 2.0)
+    moped (2.0.0.beta5)
+      bson (~> 2.1)
       connection_pool (~> 1.2)
       optionable (~> 0.2.0)
-    multi_json (1.8.2)
-    nokogiri (1.6.0)
+    multi_json (1.8.4)
+    nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     optionable (0.2.0)
-    origin (1.1.0)
+    origin (2.1.0)
     orm_adapter (0.5.0)
+    polyamorous (0.6.4)
+      activerecord (>= 3.0)
     polyglot (0.3.3)
     pry (0.9.12.4)
       coderay (~> 1.0)
@@ -166,18 +195,24 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.2)
       sprockets-rails (~> 2.0.0)
-    rails_layout (0.5.6)
+    rails_layout (1.0.5)
     railties (4.0.2)
       actionpack (= 4.0.2)
       activesupport (= 4.0.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.1.0)
+    rake (10.1.1)
+    ransack (1.1.0)
+      actionpack (>= 3.0)
+      activerecord (>= 3.0)
+      polyamorous (~> 0.6.0)
     rb-fchange (0.0.6)
       ffi
-    rb-fsevent (0.9.3)
-    rb-inotify (0.9.2)
+    rb-fsevent (0.9.4)
+    rb-inotify (0.9.3)
       ffi (>= 0.5.0)
+    responders (1.0.0)
+      railties (>= 3.2, < 5)
     rolify (3.2.0)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
@@ -187,14 +222,15 @@ GEM
     rspec-expectations (2.14.4)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.14.4)
-    rspec-rails (2.14.0)
+    rspec-rails (2.14.1)
       actionpack (>= 3.0)
+      activemodel (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
-    sass (3.2.12)
+    sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
@@ -224,10 +260,10 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.0.0)
+    turbolinks (2.2.0)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.3.2)
+    uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     warden (1.2.3)
@@ -239,6 +275,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activeadmin!
   better_errors
   binding_of_caller
   bootstrap-sass (>= 3.0.0.0)
@@ -253,10 +290,10 @@ DEPENDENCIES
   guard-bundler
   guard-rails
   guard-rspec
+  inherited_resources
   jbuilder (~> 1.2)
   jquery-rails
-  mongoid (= 4.0.0.alpha1)!
-  mongoid-rspec (>= 1.6.0)!
+  mongoid (= 4.0.0.alpha2)!
   quiet_assets
   rails (= 4.0.2)
   rails_layout

@@ -11,7 +11,7 @@ gem 'bootstrap-sass', '>= 3.0.0.0'
 gem 'cancan'
 gem 'devise'
 gem 'figaro'
-gem 'mongoid', '4.0.0.alpha1', :github=>"mongoid/mongoid"
+gem 'mongoid', '4.0.0.alpha2', :github=>"mongoid/mongoid"
 gem 'rolify'
 gem 'simple_form'
 group :development do
@@ -39,3 +39,5 @@ group :test do
   gem 'email_spec'
   gem 'mongoid-rspec', '>= 1.6.0', :github=>"evansagge/mongoid-rspec"
 end
+
+gem 'inherited_resources'
