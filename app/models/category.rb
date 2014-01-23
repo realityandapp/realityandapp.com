@@ -1,5 +1,6 @@
 class Category
   include Mongoid::Document
+  include Mongoid::Timestamps
   field :name, type: String
   field :ord, type: Integer, default: ->{ Category.count + 1}
   field :is_menu, type: Boolean
@@ -12,10 +13,10 @@ class Category
 
   #accepts_nested_attributes_for :categories
 
-  scope :root, where(parent: nil)
-  scope :in_menu, where(is_menu: true)
-  scope :in_index, where(is_index: true)
-  default_scope desc(:ord)
+  scope :root, ->{where(parent: nil)}
+  scope :in_menu, ->{where(is_menu: true)}
+  scope :in_index, ->{where(is_index: true)}
+  default_scope {desc(:ord)}
   
   index({ ord: 1 }, {background: true })
   index({ is_menu: 1 }, {background: true })

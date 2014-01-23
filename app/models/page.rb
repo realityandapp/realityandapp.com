@@ -9,8 +9,8 @@ class Page
   field :visits, type: Integer, default: 0
   belongs_to :category
 
-  scope :recent, desc(:created_at)
-  scope :older, asc(:created_at)
+  scope :recent, ->{desc(:created_at)}
+  scope :older, ->{asc(:created_at)}
 
   #validates :path, presence: true, uniqueness: true
   def to_s
