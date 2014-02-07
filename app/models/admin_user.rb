@@ -1,10 +1,12 @@
-class User
+class AdminUser
   include Mongoid::Document
-  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  #attr_accessible :email, :password, :password_confirmation, :remember_me
 
   ## Database authenticatable
   field :email,              :type => String, :default => ""
@@ -34,9 +36,7 @@ class User
   # field :failed_attempts, :type => Integer, :default => 0 # Only if lock strategy is :failed_attempts
   # field :unlock_token,    :type => String # Only if unlock strategy is :email or :both
   # field :locked_at,       :type => Time
-  
-  #name
-  index({ name: 1 }, { unique: true, background: true })
-  field :name, :type => String
-  validates :name, presence: true, length: 2..10, uniqueness: true
+
+  ## Token authenticatable
+  # field :authentication_token, :type => String
 end
