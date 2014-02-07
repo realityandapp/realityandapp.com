@@ -39,3 +39,4 @@ module Raa
     config.i18n.default_locale = "zh-CN".to_sym
   end
 end
+I18n.enforce_available_locales = false

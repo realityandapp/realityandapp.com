@@ -41,3 +41,4 @@ group :test do
 end
 
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'rails_kindeditor'

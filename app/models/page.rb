@@ -12,7 +12,7 @@ class Page
   scope :recent, ->{desc(:created_at)}
   scope :older, ->{asc(:created_at)}
 
-  #validates :path, presence: true, uniqueness: true
+  validates :content, presence: true
   def to_s
     title
   end

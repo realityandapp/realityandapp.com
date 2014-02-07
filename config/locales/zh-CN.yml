@@ -189,24 +189,24 @@ zh-CN:
 
   mongoid:
     models:
-      user: 用户
-      comment: 评论
-      group: 商品分类
-      article: 文章
-      wine: 酒
-      wine_price: 酒价
+      admin_user: 管理员
+      category: 分类
+      page: 页面
+      post: 文章
+      video: 视频
+      sidebar: 右边栏
+      flash: 滚动图片
       wine_monitor: 酒价监视器
       website: 网站
-      joke: 笑料
-      admin_user: 管理员
+      option: 网站设置
+      pdf: 首页pdf
     attributes:
-      wine:
-        min_price: 历史最低价
-        current_price: 现价
-        fit_price: 建议入手价
-      wine_monitor:
-        sn: 商品编号
-        wines: 所属美酒
+      post:
+        image: 列表配图
+      category:
+        parent: 父分类
+      video:
+        url: 优酷视频网址
 
   attributes:
     created_at: 创建于
@@ -248,6 +248,16 @@ zh-CN:
     price_per_liter: 每升均价
     min_price_per_liter: 最低每升均价
     website: 网站
+    visits: 访问次数
+    published_at: 发布于
+    introduction: 简介
+    category: 分类
+    category_id: 分类ID
+    category_name: 分类名称
+    url: 链接地址
+    ord: 排序（越大越靠前）
+    is_menu: 是否为导航（没有父节点，且为真则在导航显示）
+    is_index: 是否为主页左下新闻分类
 
 
   labels:
@@ -307,9 +317,9 @@ zh-CN:
     pending: 待审
     s1: '+1'
     s-1: '睬'
-  site_title: 笑料百出
-  site_desc: '最新、最全笑料的收录，搞笑笑话、搞笑图片、搞笑文章集合，给你一站式休闲平台，让您看的开心，看得省事。'
-  site_keywords: '笑料百出,笑料,吐槽'
+  site_title: iddtherapy.cn
+  site_desc: '找回你的生活，脊柱健康从这里开始'
+  site_keywords: '酒,比价'
 
   controller:
     groups: 商品分组
@@ -335,33 +345,26 @@ zh-CN:
     articles: 文章
     wine_monitors: '酒价信息'
   action:
+    articles:
+      new: 添加
+    sessions:
+      new: 登录
+    registrations:
+      new: 注册
+      edit: 修改资料
     home:
       contact: 联系方式
       download: 应用下载
-    jokes:
-      index: 笑料
-      short: 短篇
-      long: 长篇
-      image: 有图有真相
-      video: 视频笑料
-      show: 笑料
     new: 添加
     create: 提交
     index: 列表
     edit: 修改
     show: 显示
     search: 搜索
-    traders:
-      contact: 联系方式
-    commodities:
-      categories: 分类目录
-      category: 分类%{category}
-    tags: 标签
-    tag: "标签: %{tag}"
 
   will_paginate:
-    previous_label: "&#8592; 上一页"
-    next_label: "下一页 &#8594;"
+    previous_label: "&#8592;"
+    next_label: "&#8594;"
     page_gap: "&hellip;"
 
   activity_status:
@@ -372,10 +375,10 @@ zh-CN:
 
   views:
     pagination:
-      first: "&laquo; 首页"
-      last: "末页 &raquo;"
-      previous: "&lsaquo; 前页"
-      next: "下一页 &rsaquo;"
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
       truncate: "..."
 
   random:

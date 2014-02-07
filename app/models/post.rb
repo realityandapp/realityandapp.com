@@ -1,6 +1,5 @@
 class Post < Page
   field :introduction, type: String
-  mount_uploader :image, ImageUploader
 
   validates :title, presence: true
 
