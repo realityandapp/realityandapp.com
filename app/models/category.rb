@@ -1,28 +1,30 @@
 class Category
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Mongoid::Tree
+  include Mongoid::Tree::Ordering
+
   field :name, type: String
-  field :ord, type: Integer, default: ->{ Category.count + 1}
-  field :is_menu, type: Boolean
-  field :is_index, type: Boolean
-  mount_uploader :image, FlashUploader
-  belongs_to :parent, class_name: 'Category', inverse_of: :categories
-  has_many :categories, inverse_of: :parent
-  has_many :pages
+  #field :path, type: String
+  #field :ord, type: Integer, default: ->{ Category.count + 1}
+  #belongs_to :parent, class_name: 'Category', inverse_of: :categories
+  #has_many :categories, inverse_of: :parent
+  #has_many :pages
   has_many :posts
+
+  #belongs_to :path_page, class_name: 'Page', inverse_of: nil
 
   #accepts_nested_attributes_for :categories
 
-  scope :root, ->{where(parent: nil)}
-  scope :in_menu, ->{where(is_menu: true)}
-  scope :in_index, ->{where(is_index: true)}
-  default_scope {desc(:ord)}
+  #scope :root, ->{where(parent: nil)}
+  #default_scope ->{ asc [:depth, :position]  }
+
+  validates :name, presence: true
   
-  index({ ord: 1 }, {background: true })
-  index({ is_menu: 1 }, {background: true })
-  index({ is_index: 1 }, {background: true })
+  #index({ ord: 1 }, {background: true })
 
   def to_s
-    name
+    #('-' * depth) + 
+      name
   end
 end

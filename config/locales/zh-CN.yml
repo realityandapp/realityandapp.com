@@ -255,7 +255,7 @@ zh-CN:
     category_id: 分类ID
     category_name: 分类名称
     url: 链接地址
-    ord: 排序（越大越靠前）
+    ord: 排序（越小越靠前）
     is_menu: 是否为导航（没有父节点，且为真则在导航显示）
     is_index: 是否为主页左下新闻分类
 

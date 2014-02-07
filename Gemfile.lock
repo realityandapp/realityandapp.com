@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/benedikt/mongoid-tree
+  revision: a13f94503983765da1436d4b46599cd95ca6f324
+  branch: mongoid-4.0
+  specs:
+    mongoid-tree (1.0.4)
+      mongoid (>= 3.0, <= 5.0)
+
+GIT
   remote: git://github.com/josevalim/inherited_resources.git
   revision: e4fb9fc804488532014307190812946d63a480a3
   specs:
@@ -272,6 +280,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mongoid (= 4.0.0.beta1)!
+  mongoid-tree!
   quiet_assets
   rails (= 4.0.2)
   rails_kindeditor

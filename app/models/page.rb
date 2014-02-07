@@ -7,11 +7,12 @@ class Page
   field :status, type: String
   field :published_at, type: Time
   field :visits, type: Integer, default: 0
-  belongs_to :category
 
   scope :recent, ->{desc(:created_at)}
   scope :older, ->{asc(:created_at)}
+  scope :absolute, ->{where(_type: nil)}
 
+  validates :title, presence: true
   validates :content, presence: true
   def to_s
     title

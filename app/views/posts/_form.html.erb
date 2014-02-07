@@ -2,8 +2,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :category, collection: Category.all %>
     <%= f.input :title %>
-    <%= f.input :introduction %>
+    <%= f.input :introduction, as: :text %>
     <%= f.input :content, :as => :kindeditor %>
   </div>
 

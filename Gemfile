@@ -42,3 +42,4 @@ end
 
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'rails_kindeditor'
+gem 'mongoid-tree', git: 'git://github.com/benedikt/mongoid-tree', branch: 'mongoid-4.0', require: 'mongoid/tree'
