@@ -2,7 +2,7 @@ class Post < Page
   field :introduction, type: String
   belongs_to :category
 
-  validates :title, presence: true
+  #validates :title, presence: true
 
   scope :newer_by, ->(post) {where(:created_at.gt => post.created_at).older}
   scope :older_by, ->(post) {where(:created_at.lt => post.created_at).recent}
@@ -14,5 +14,9 @@ class Post < Page
 
   def newer
     @newer ||= category.posts.newer_by(self).first if category
+  end
+
+  def self.to_s
+    I18n.t('mongoid.models.post')
   end
 end

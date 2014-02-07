@@ -17,4 +17,8 @@ class Page
   def to_s
     title
   end
+
+  def self.to_s
+    I18n.t('mongoid.models.page')
+  end
 end

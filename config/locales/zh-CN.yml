@@ -178,6 +178,7 @@ zh-CN:
       at_least: 至少要填写一样方便联系到您
       need_least_one_picture: 至少要上传一张图片
       not_yours: 这商品不是您的
+      url_page_category_need_one: 网址、页面、分类至少要填写一项
 
   helpers:
     select:
@@ -200,6 +201,7 @@ zh-CN:
       website: 网站
       option: 网站设置
       pdf: 首页pdf
+      menu: 主页选项
     attributes:
       post:
         image: 列表配图
@@ -207,6 +209,9 @@ zh-CN:
         parent: 父分类
       video:
         url: 优酷视频网址
+      menu:
+        page: 页面
+        parent: 父选项
 
   attributes:
     created_at: 创建于
