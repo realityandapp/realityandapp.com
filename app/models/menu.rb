@@ -2,7 +2,7 @@ class Menu
   include Mongoid::Document
   include Mongoid::Timestamps
   field :name, type: String
-  field :ord, type: Integer
+  field :ord, type: Integer, default: ->{ Category.count + 1}
   field :url, type: String
 
   belongs_to :parent, class_name: 'Menu', inverse_of: :menus

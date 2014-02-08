@@ -5,7 +5,9 @@
     <tr>
       <th>Name</th>
       <th>Ord</th>
-      <th>Path</th>
+      <th>url</th>
+      <th>page</th>
+      <th>category</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,10 +17,11 @@
   <tbody>
     <% @menus.each do |menu| %>
       <tr>
-        <td><%= menu.name %></td>
+        <td><%= link_to menu.name, menu %></td>
         <td><%= menu.ord %></td>
-        <td><%= menu.path %></td>
-        <td><%= link_to 'Show', menu %></td>
+        <td><%= menu.url %></td>
+        <td><%= menu.page %></td>
+        <td><%= menu.category %></td>
         <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
         <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

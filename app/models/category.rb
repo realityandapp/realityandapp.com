@@ -10,7 +10,7 @@ class Category
   #belongs_to :parent, class_name: 'Category', inverse_of: :categories
   #has_many :categories, inverse_of: :parent
   #has_many :pages
-  has_many :posts
+  has_many :posts, class_name: 'Post', inverse_of: :category
 
   #belongs_to :path_page, class_name: 'Page', inverse_of: nil
 

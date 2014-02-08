@@ -1,7 +1,15 @@
 <%# add navigation links to this file %>
 <% @menus = Menu.all %>
 <% @menus.each do |menu| %>
-  <li><%= link_to menu.name, menu.url %></li>
+  <li>
+    <% if !menu.url.blank? %>
+      <%= link_to menu.name, menu.url %>
+    <% elsif !menu.page.blank? %>
+      <%= link_to menu.name, page_path(menu.page) %>
+    <% elsif !menu.category.blank? %>
+      <%= link_to menu.name, category_path(menu.category) %>
+    <% end -%>
+  </li>
 <% end -%>
 <!--
 <li><%= link_to '网站建设','/' %></li>

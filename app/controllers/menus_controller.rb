@@ -7,7 +7,7 @@ class MenusController < InheritedResources::Base
   end
 
   def update
-    create!{@menu}
+    create!{menus_path}
   end
 
   def permitted_params
