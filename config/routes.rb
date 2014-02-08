@@ -1,4 +1,5 @@
 Raa::Application.routes.draw do
+  resources :links
   resources :menus
   resources :categories
   resources :posts

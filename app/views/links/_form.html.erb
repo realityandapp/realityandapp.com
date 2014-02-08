@@ -1,0 +1,13 @@
+<%= simple_form_for(@link) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :url, hint: 'http://realityandapp.com' %>
+    <%= f.input :is_follow, as: :boolean %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
