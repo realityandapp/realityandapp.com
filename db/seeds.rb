@@ -7,12 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # Environment variables (ENV['...']) can be set in the file config/application.yml.
 # See http://railsapps.github.io/rails-environment-variables.html
-puts 'ROLES'
-YAML.load(ENV['ROLES']).each do |role|
-  Role.mongo_session['roles'].insert({ :name => role })
-  puts 'role: ' << role
-end
-puts 'DEFAULT USERS'
-user = User.create! :name => ENV['ADMIN_NAME'].dup, :email => ENV['ADMIN_EMAIL'].dup, :password => ENV['ADMIN_PASSWORD'].dup, :password_confirmation => ENV['ADMIN_PASSWORD'].dup
-puts 'user: ' << user.name
-user.add_role :admin
+Menu.where(name: '网站制作').first_or_create(url: '/')
+Menu.where(name: '应用开发').first_or_create(url: '/')
+Menu.where(name: '微信、易信平台搭建').first_or_create(url: '/')
+Menu.where(name: '案例展示').first_or_create(url: '/')
+Menu.where(name: '联系我们').first_or_create(url: '/')

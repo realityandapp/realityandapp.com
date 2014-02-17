@@ -6,7 +6,7 @@
     <%= f.input :name %>
     <%= f.input :ord %>
     <%= f.input :url %>
-    <%= f.input :page, collection: [Page, Post], as: :grouped_select, group_method: :absolute, group_label_method: :to_s, selected: :page, include_blank: true, prompt: '请选择跳转到的页面' %>
+    <%= f.input :page, collection: [Page, Post], as: :grouped_select, group_method: :scoped, group_label_method: :to_s, selected: :page, include_blank: true, prompt: '请选择跳转到的页面' %>
     <%= f.input :category, collection: Category.all, selected: :category, include_blank: true, prompt: '请选择跳转到的分类' %>
   </div>
 
