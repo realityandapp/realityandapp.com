@@ -25,6 +25,10 @@ class Post
     @newer ||= category.posts.newer_by(self).first if category
   end
 
+  def to_s
+    title
+  end
+
   def self.to_s
     I18n.t('mongoid.models.post')
   end

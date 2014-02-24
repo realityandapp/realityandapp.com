@@ -7,10 +7,10 @@ class MenusController < InheritedResources::Base
   end
 
   def update
-    create!{menus_path}
+    update!{menus_path}
   end
 
   def permitted_params
-    params.permit(menu: [:parent, :name, :ord, :url, :page, :category])
+    params.permit(menu: [:parent, :name, :ord, :url, :page, :category, :post])
   end
 end

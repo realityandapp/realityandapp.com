@@ -7,6 +7,7 @@
       <th>Ord</th>
       <th>url</th>
       <th>page</th>
+      <th>post</th>
       <th>category</th>
       <th></th>
       <th></th>
@@ -20,7 +21,8 @@
         <td><%= link_to menu.name, menu %></td>
         <td><%= menu.ord %></td>
         <td><%= menu.url %></td>
-        <td><%= menu.page %></td>
+        <td><%= link_to menu.page, menu.page if menu.page %></td>
+        <td><%= link_to menu.post, menu.post if menu.post %></td>
         <td><%= menu.category %></td>
         <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
         <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
