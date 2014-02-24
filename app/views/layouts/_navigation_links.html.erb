@@ -5,7 +5,9 @@
     <% if !menu.url.blank? %>
       <%= link_to menu.name, menu.url %>
     <% elsif !menu.page.blank? %>
-      <%= link_to menu.name, page_path(menu.page) %>
+      <%= link_to menu.name, menu.page %>
+    <% elsif !menu.post.blank? %>
+      <%= link_to menu.name, menu.post %>
     <% elsif !menu.category.blank? %>
       <%= link_to menu.name, category_path(menu.category) %>
     <% end -%>

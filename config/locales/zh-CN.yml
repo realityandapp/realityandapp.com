@@ -210,7 +210,6 @@ zh-CN:
       video:
         url: 优酷视频网址
       menu:
-        page: 页面
         parent: 父选项
 
   attributes:
@@ -263,6 +262,8 @@ zh-CN:
     ord: 排序（越小越靠前）
     is_menu: 是否为导航（没有父节点，且为真则在导航显示）
     is_index: 是否为主页左下新闻分类
+    page: 页面
+    post: 文章
 
 
   labels:
