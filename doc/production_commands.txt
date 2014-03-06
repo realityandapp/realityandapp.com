@@ -1,5 +1,12 @@
+bundle install --without='development test'
+
+RAILS_ENV=production rake assets:precompile
+
 RAILS_ENV=production rake kindeditor:assets
 
 cp -r vendor/assets/images/* public/assets/
 
 cp -r $(bundle show bootstrap-sass)/vendor/assets/fonts/* public/assets/
+
+bundle exec thin start -C config/thin.yml
+
