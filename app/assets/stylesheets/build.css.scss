@@ -32,13 +32,15 @@
 
 #build .section2-2 ul li:before,.section4-2 ul li:before,.section3-1 ul li:first-child+li:before,.section3-1 ul li:first-child+li+li+li:before,.section3-1 ul li:first-child+li+li+li+li+li:before{content:url("build/arrow_build.png");padding-right:7px}
 
-#build #section2,#section3{min-height:255px;background:url("build/divider_content.png") no-repeat bottom}
+#build #section2,#section3{
+/*min-height:255px;*/
+background:url("build/divider_content.png") no-repeat bottom}
 
 #build img{border-radius:0}
 
 #build p{line-height:24px}
 
-#build #section6,#section6{margin-bottom:40px}
+/*#build #section6,#section6{margin-bottom:40px}*/
 
 #build div[class*="section6-"]{border-right:1px solid #CCC}
 
@@ -112,7 +114,10 @@ height:570px;position:relative}
 
 #build #section1 div:nth-child(2){height:390px}
 
-#build #section2,#section3{height:450px;position:relative}
+#build #section2,#section3{
+/*height:450px;*/
+position:relative
+}
 
 #build #section1 div:nth-child(2) img:last-child{right:10%;bottom:0}
 
