@@ -1,4 +1,12 @@
 module ApplicationHelper
+  def default_meta_tags
+    {
+      site: "#{t("controller.#{controller_name}")} | #{t('title')}",
+      description: t('desc'),
+      keywords: t('keywords'), 
+      reverse: true,
+    }
+  end
 
   def display_base_errors resource
     return '' if (resource.errors.empty?) or (resource.errors[:base].empty?)

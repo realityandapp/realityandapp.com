@@ -350,6 +350,7 @@ zh-CN:
     posts: 夜市秀
     articles: 文章
     wine_monitors: '酒价信息'
+    pages: 内容
   action:
     articles:
       new: 添加
@@ -418,3 +419,7 @@ zh-CN:
   website:
     jd: 京东
     dangdang: 当当网
+  seo_title: 现实与应用 RealityandApp.com 您进入O2O的最佳解决方案
+  title: 现实与应用 RealityandApp.com 您进入O2O的最佳解决方案
+  desc: 现实与应用 RealityandApp.com 您进入O2O的最佳解决方案
+  keywords: '现实与应用, O2O, RAA'
