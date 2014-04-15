@@ -1,6 +1,6 @@
 source 'http://ruby.taobao.org'
 #ruby '2.1.1'
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.0'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -43,3 +43,4 @@ end
 gem 'inherited_resources', github: 'josevalim/inherited_resources'
 gem 'rails_kindeditor'
 gem 'mongoid-tree', git: 'git://github.com/benedikt/mongoid-tree', branch: 'mongoid-4.0', require: 'mongoid/tree'
+gem 'meta-tags', :require => 'meta_tags'
