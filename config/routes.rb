@@ -1,4 +1,5 @@
 Raa::Application.routes.draw do
+  get 'pages/:id.html' => 'pages#show', as: :page
   resources :links
   resources :menus
   resources :categories
