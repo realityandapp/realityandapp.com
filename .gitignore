@@ -79,3 +79,5 @@ pickle-email-*.html
 /config/mongoid.yml
 
 public/assets
+public/pages
+public/index.html
